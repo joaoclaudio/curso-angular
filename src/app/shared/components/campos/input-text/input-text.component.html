@@ -1,0 +1,8 @@
+<div>
+  <mat-form-field [formGroup]="formGroup" class="full-width">
+    <input matInput [placeholder]="titulo" [name]="controlName" [formControlName]="controlName" />
+    <mat-error *ngIf="validacao.hasAnyError(formControl)">
+      {{ validacao.messageError(formControl) }}
+    </mat-error>
+  </mat-form-field>
+</div>

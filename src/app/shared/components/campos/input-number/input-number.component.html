@@ -1,0 +1,17 @@
+<div [formGroup]="formGroup">
+  <mat-form-field class="full-width">
+    <input
+      matInput
+      type="number"
+      [placeholder]="titulo"
+      [formControlName]="controlName"
+      [name]="controlName"
+      [min]="minimo"
+      [max]="maximo"
+      [step]="incremento"
+    />
+    <mat-error *ngIf="validacao.hasAnyError(formControl)">
+      {{ validacao.messageError(formControl) }}
+    </mat-error>
+  </mat-form-field>
+</div>
