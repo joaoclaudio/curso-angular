@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class ValidarCamposService {
   constructor() {}
 
   public messageError(control: AbstractControl): string {
     if (control.errors.required) {
-      return "Campo obrigatório";
+      return 'Campo obrigatório';
     } else if (control.errors.minlength) {
       return `Campo precisa ter no mínimo ${control.errors.minlength.requiredLength} caracteres`;
     } else if (control.errors.maxlength) {

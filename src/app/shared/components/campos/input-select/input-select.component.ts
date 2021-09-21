@@ -1,12 +1,12 @@
-import { Component, Input } from "@angular/core";
-import { AbstractControl, FormGroup } from "@angular/forms";
+import { Component, Input } from '@angular/core';
+import { AbstractControl, FormGroup } from '@angular/forms';
 
-import { ValidarCamposService } from "../validar-campos.service";
+import { ValidarCamposService } from '../validar-campos.service';
 
 @Component({
-  selector: "dio-input-select",
-  templateUrl: "./input-select.component.html",
-  styleUrls: ["./input-select.component.scss"],
+  selector: 'dio-input-select',
+  templateUrl: './input-select.component.html',
+  styleUrls: ['./input-select.component.scss'],
 })
 export class InputSelectComponent {
   @Input() titulo: string;
@@ -14,7 +14,7 @@ export class InputSelectComponent {
   @Input() controlName: string;
   @Input() opcoes: Array<string> = [];
 
-  constructor(public validacao: ValidarCamposService) { }
+  constructor(public validacao: ValidarCamposService) {}
 
   get formControl(): AbstractControl {
     return this.formGroup.controls[this.controlName];
